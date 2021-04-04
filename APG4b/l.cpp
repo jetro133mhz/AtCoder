@@ -8,11 +8,22 @@ int main() {
 
   for (int i = 0; i < N; i++) {
     int B;
-    cin >> B;
-    if (B == 0) {
+    string op;
+    cin >> op >> B;
+
+    if (op == "+") {
+      A += B;
+    } else if (op == "-") {
+      A -= B;
+    } else if (op == "*") {
+      A *= B;
+    } else if (op == "/" && B != 0) {
+      A /= B;
+    } else {
       cout << "error" << endl;
       break;
     }
-    cout << i + 1 << ":" << endl;
+
+    cout << i + 1 << ":" << A << endl;
   }
 }
