@@ -15,19 +15,20 @@ int main() {
   int result = 0;
   while (1) {
     for (int i = 0; i < N; i++) {
+      //偶数の場合は2で割った数値で置き換える
       if ((vec.at(i) % 2) == 0) {
         vec.at(i) = vec.at(i) / 2;
       } else {
-        //奇数が見つかった場合は中断してループを抜ける
+        //奇数の場合はフラグを立ててループを抜ける
         isOdd = true;
         break;
       }
     }
-    //奇数フラグがtrueの場合ループを抜けて終了
+    //奇数フラグがtrueの場合は終了
     if (isOdd) {
       break;
     } else {
-      //奇数フラグがfalseなので計算回数を加算してループ継続
+      //奇数フラグがfalseの場合は計算回数をインクリメントしてループ継続
       result++;
     }
   }
