@@ -11,12 +11,7 @@ int main() {
   }
 
   // 結果格納用配列定義・初期化
-  vector<vector<char>> R(N, vector<char>(N));
-  for (int i = 0; i < N; ++i) {
-    for (int j = 0; j < N; ++j) {
-      R.at(i).at(j) = '-';
-    }
-  }
+  vector<vector<char>> R(N, vector<char>(N, '-'));
 
   //結果格納
   for (int i = 0; i < M; ++i) {
