@@ -7,61 +7,56 @@ int main() {
   cin >> H >> W;
 
   vector<vector<char>> A(W, vector<char>(H));
-  for (int i = 0; i < H; ++i) {
-    for (int j = 0; j < W; ++j) {
+  for (int i = 0; i < H; i++) {
+    for (int j = 0; j < W; j++) {
       cin >> A.at(j).at(i);
     }
   }
 
-  //圧縮処理
-  //W方向
-  for (int i = 0; i < H; ++i) {
+  //W方向のデータチェック
+  vector<bool> hasBlack_row(H, false);
+  for (int i = 0; i < H; i++) {
     int count = 0;
-    for (int j = 0; j < W; ++j) {
+    for (int j = 0; j < W; j++) {
       if (A.at(j).at(i) == '#') {
         continue;
       } else {
         count++;
       }
     }
-    //すべて空の行は「-」で埋める
+    //すべて空の場合はi行目は空としてマークする
     if (count == W) {
-      for (int j = 0; j < W; ++j) {
-        A.at(j).at(i) = '-';
-      }
+      hasBlack_row.at(i) = true;
     }
   }
 
-  //H方向
-  for (int i = 0; i < W; ++i) {
+  //H方向のデータチェック
+  vector<bool> hasBlack_col(W, false);
+  for (int i = 0; i < W; i++) {
     int count = 0;
-    for (int j = 0; j < H; ++j) {
+    for (int j = 0; j < H; j++) {
       if (A.at(i).at(j) == '#') {
         continue;
       } else {
         count++;
       }
     }
-    //すべて空の列は「-」で埋める
+    //すべて空の列はi列目は空としてマークする
     if (count == H) {
-      for (int j = 0; j < H; ++j) {
-        A.at(i).at(j) = '-';
-      }
+      hasBlack_col.at(i) = true;
     }
   }
 
-
-  //出力おかしい
   //結果出力
-  for (int i = 0; i < H; ++i) {
-    for (int j = 0; j < W; ++j) {
-      if (A.at(j).at(i) != '-') {
-        if (j == (W - 1)) {
-          cout << A.at(j).at(i) << endl;
-        } else {
-          cout << A.at(j).at(i);
+  for (int i = 0; i < H; i++) {
+    if (!hasBlack_row.at(i)) {
+      for (int j = 0; j < W; j++) {
+        if (hasBlack_col.at(j)) {
+          continue;
         }
+        cout << A.at(j).at(i);
       }
+      cout << endl;
     }
   }
 }
