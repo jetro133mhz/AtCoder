@@ -7,17 +7,12 @@ int main() {
   cin >> r >> x >> y;
 
   double distance = sqrt(x * x + y * y);
-  int result = 0;
+  double result = 0;
 
-  while (distance > r) {
-    //直線移動で何歩必要か数える
-    distance -= r;
-    result++;
-  }
-
-  //小数点以下の端数が残る場合はもう1歩必要なため、resultに加算
-  //TODO どうも違うようなので再考察
-  if (distance > 0) {
+  //直線移動で何歩必要か数える
+  result = ceil(distance / r);
+  //距離より歩幅の方が多い場合は2歩必要
+  if (r > distance) {
     result++;
   }
   cout << result << endl;
