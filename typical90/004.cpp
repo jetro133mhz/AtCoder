@@ -19,7 +19,6 @@ int main() {
 
   for (int i = 0; i < h; ++i) {
     for (int j = 0; j < w; ++j) {
-      int sum = 0;
       cout <<  sum_h.at(i) + sum_w.at(j) - B.at(j).at(i);
       if (j != w - 1) {
         cout << " ";
