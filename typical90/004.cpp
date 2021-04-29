@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+  //TLEになるので駄目
   int h, w;
   cin >> h >> w;
   vector<vector<int>> B(w, vector<int>(h));
