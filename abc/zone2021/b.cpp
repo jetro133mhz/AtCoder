@@ -21,12 +21,12 @@ int main() {
     //切片
     double b = (double) vec_h.at(i) - (double) a * (double) vec_d.at(i);
     result.at(i) = b;
-
   }
 
+  //各切片のうち最大値を返す 切片が負の値になる場合は0を返す
   sort(result.begin(), result.end());
   if (result.at(result.size() - 1) <= 0) {
-    cout << double(0) << endl;
+    cout << 0 << endl;
   } else {
     cout << result.at(result.size() - 1) << endl;
   }
