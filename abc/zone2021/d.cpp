@@ -18,6 +18,7 @@ int main() {
   while (flag) {
     int count = 0;
     for (int i = 0; i < t.size() - 1; ++i) {
+      //処理の過程で空文字になっている場合があるのでチェックする
       if(t.empty()){
         break;
       }
