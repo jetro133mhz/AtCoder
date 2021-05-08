@@ -5,16 +5,14 @@
 using namespace std;
 
 int main() {
-  string n;
+  long n;
   int k;
   cin >> n >> k;
   for (int i = 0; i < k; ++i) {
-    long value = stol(n);
-    if (value % 200 == 0) {
-      value /= 200;
-      n = to_string(value);
+    if (n % 200 == 0) {
+      n /= 200;
     } else {
-      n += "200";
+      n = n * 1000 + 200;
     }
   }
   cout << n << endl;
