@@ -1,3 +1,4 @@
+//ABC081B - Shift only
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,15 +14,15 @@ int main() {
   bool isOdd = false;
   //計算回数
   int result = 0;
-  while (1) {
+  while (true) {
     for (int i = 0; i < N; i++) {
       //偶数の場合は2で割った数値で置き換える
-      if ((vec.at(i) % 2) == 0) {
-        vec.at(i) = vec.at(i) / 2;
-      } else {
-        //奇数の場合はフラグを立ててループを抜ける
+      if (vec.at(i) % 2 != 0) {
+        //奇数がある場合はフラグを立ててループを抜ける
         isOdd = true;
         break;
+      } else {
+        vec.at(i) = vec.at(i) / 2;
       }
     }
     //奇数フラグがtrueの場合は終了
@@ -33,5 +34,6 @@ int main() {
     }
   }
 
+  // 結果を出力
   cout << result << endl;
 }
