@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.14)
+project(APG4b)
+
+set(CMAKE_CXX_STANDARD 14)
+
+# AOJ
+add_executable(ITP1_1_A ITP1_1_A.cpp)
+add_executable(ITP1_1_B ITP1_1_B.cpp)
+add_executable(ITP1_1_C ITP1_1_C.cpp)
+add_executable(ITP1_1_D ITP1_1_D.cpp)
+add_executable(ITP1_2_A ITP1_2_A.cpp)
+add_executable(ITP1_2_B ITP1_2_B.cpp)
+add_executable(ITP1_2_C ITP1_2_C.cpp)
+add_executable(ITP1_2_D ITP1_2_D.cpp)
+add_executable(ITP1_3_A ITP1_3_A.cpp)
+add_executable(ITP1_3_B ITP1_3_B.cpp)
+add_executable(ITP1_3_C ITP1_3_C.cpp)
+add_executable(ITP1_3_D ITP1_3_D.cpp)
+add_executable(ITP1_4_A ITP1_4_A.cpp)
+add_executable(ITP1_4_B ITP1_4_B.cpp)
+add_executable(ITP1_4_C ITP1_4_C.cpp)
+add_executable(ITP1_4_D ITP1_4_D.cpp)
+add_executable(ITP1_5_A ITP1_5_A.cpp)
+add_executable(ITP1_5_B ITP1_5_B.cpp)
+add_executable(ITP1_5_C ITP1_5_C.cpp)
+add_executable(ITP1_5_D ITP1_5_D.cpp)
+add_executable(ITP1_6_A ITP1_6_A.cpp)
+add_executable(ITP1_6_B ITP1_6_B.cpp)
+
+

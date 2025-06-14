@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//PracticeA - Welcome to AtCoder
 int main() {
   int a, b, c;
   string S;

@@ -46,7 +46,7 @@ int main() {
       hasBlack_col.at(i) = true;
     }
   }
-
+  
   //結果出力
   for (int i = 0; i < H; i++) {
     if (!hasBlack_row.at(i)) {

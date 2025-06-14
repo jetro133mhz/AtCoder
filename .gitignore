@@ -1,0 +1,19 @@
+# CLion / CMake build
+.idea/
+cmake-build-*/
+*.iml
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
+# 実行ファイル
+*.exe
+*.out
+*.o
+*.obj
+
+# その他ログ・バックアップ
+*.log
+*.swp
+*.tmp
